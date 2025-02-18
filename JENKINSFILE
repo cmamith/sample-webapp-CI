@@ -18,7 +18,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                dir('simple-webapp') {  # Assuming app is in terraform-eks-setup/simple-webapp/
+                dir('sample-webapp-CI') {  # Assuming app is in terraform-eks-setup/simple-webapp/
                     sh 'docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .'
                 }
             }
